@@ -27,8 +27,10 @@ const SelectionSlice = ({ slice }) => {
   return (
     <Container >
       <Fade>
-        <RichText render={slice.primary.selection_header} />
-        <RichText render={slice.primary.selection_copy} />
+        {/* <RichText render={slice.primary.selection_header} /> */}
+        {/* <RichText render={slice.primary.selection_copy} /> */}
+        <h2>{RichText.asText(slice.primary.selection_header)}</h2>
+        <h3>{RichText.asText(slice.primary.selection_copy)}</h3>
         <Flex>
           {slice?.items?.map((item, i) => {
             return (
